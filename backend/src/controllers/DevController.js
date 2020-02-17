@@ -8,13 +8,9 @@ module.exports = {
         const devExists = await Dev.findOne( { user: username } )
 
         if( devExists){
-            res.json( {
-                name,
-                user: username,
-                bio,
-                avatar
-            } )
+           return res.json( devExists )
         }
+        
         const response = await axios.get(`https://api.github.com/users/${ username }`)
 
         const { name, bio, avatar_url: avatar } =  response.data
