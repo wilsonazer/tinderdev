@@ -1,4 +1,4 @@
-const { Schema, model } = require('moogoose')
+const { Schema, model } = require('mongoose')
 
 const devSchema = new Schema({
     name: {

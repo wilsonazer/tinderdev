@@ -1,17 +1,19 @@
 const axios = require('axios')
 
 module.exports = {
-   
     async store( req, res){
-        const name = "wilsonazer"
-        const response = await axios.get(`https://api.github.com/users/${ name }`)
+        const { username } =  req.body
+        const response = await axios.get(`https://api.github.com/users/${ username }`)
 
-        const { name: user , location, bio } =  response.data
+        
+
+        const { name, bio, avatar_url: avatar } =  response.data
 
         res.json( {
-            user,
-            location,
-            bio
+            name,
+            user: username,
+            bio,
+            avatar
         } )
     }
 }
