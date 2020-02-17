@@ -14,5 +14,5 @@ app.use( router )
 
 
 app.listen(3333, ()=>{ 
-    console.log('running on port 3999')
+    console.log('running on port 3333')
 })
