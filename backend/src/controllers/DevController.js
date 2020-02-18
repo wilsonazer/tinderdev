@@ -7,8 +7,8 @@ module.exports = {
 
         const devExists = await Dev.findOne( { user: username } )
 
-        if( devExists){
-           return res.json( devExists )
+        if( !devExists){
+           return res.status(400).json( {erro: 'dev not exists'} )
         }
         
         const response = await axios.get(`https://api.github.com/users/${ username }`)

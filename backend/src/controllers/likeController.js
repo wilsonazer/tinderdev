@@ -12,7 +12,14 @@ module.exports = {
             return res.status(400).json({ erro :'dev not exist'})
         }
 
-       return res.json({  targetDev })
+        if( targetDev.likes.includes( loggedDev._id)){
+            console.log('deu mach')
+        }
+
+        loggedDev.likes.push( targetDev._id )
+        await loggedDev.save()
+
+       return res.json( loggedDev )
 
     }
 }
