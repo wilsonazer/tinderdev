@@ -6,6 +6,7 @@ const dislikeController = require('./src/controllers/dislikeController')
 const router = express.Router()
 
 router.post('/devs', devController.store )
+router.get('/devs', devController.index)
 router.post('/devs/:dev_id/likes', likeController.store )
 router.post('/devs/:dev_id/dislikes', dislikeController.store)
 
