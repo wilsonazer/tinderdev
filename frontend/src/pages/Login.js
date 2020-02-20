@@ -5,7 +5,7 @@ const Login = () =>(
     <div className='form-login'>
         <h1 className='logo'>TindDev</h1>
         <form>
-            <input type='text' name='login' placeholder='Informe seu login'/>
+            <input type='text' name='login' placeholder='Digite seu usuário no Github'/>
             <button type='submit' name='login'>Login</button>
         </form>
     </div>
