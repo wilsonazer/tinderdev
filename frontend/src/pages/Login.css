@@ -1,0 +1,8 @@
+.logo{ 
+    color: crimson;
+    font-size: 1.5em;
+}
+
+.form{
+    display: flex;
+}
